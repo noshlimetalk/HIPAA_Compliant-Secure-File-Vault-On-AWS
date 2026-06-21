@@ -17,7 +17,7 @@
 
   ## Security Control
 
-  ## Control                             ## Implementation 
+  ## Control                              Implementation 
 
   1. Encryption at rest (Linux)  (OpenSSL AES-256-CBC,PBKDF2, 100k iterations)
   2. Encryption at rest (AWS)  (S3 SS3-KMS with customer managed key)
@@ -26,9 +26,18 @@
   5. Audit Logging             (Cloudtrail capturing all S3 read/write/management events)
   6. Alerting                 ( CloudWatch alarm --- SNS Email on any error event)
   7. Public Access            (All 4 S3 public access block settings enabled)
+ 
+
+ ### Tech Stack
+
+1. OS:Red Hat Enterprise Linux (Humber College VCloud)
+2. Encryption:OpenSSL 3.5.1- AES-256-CBC-PBKDF2
+3. Cloud: AWS S3-KMS-IAM-CloudTrail-Cloudwatch-SNS
+4. CLI: AWS CLI v2.bash
+   
 
 
-### Projecture 
+### Project Structure
 
 1. Scripts
    - scripts/
@@ -66,3 +75,9 @@
       Alis: hipaa-vault-key
       Type: Symmetric
       Usage: Encrypt and Decrypt
+
+      ### Author
+
+      Krisney Manuel
+      Computer Systems Technology
+      AWS Certified Cloud Practitioner (CLF-C02)
